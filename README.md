@@ -1407,5 +1407,20 @@ test case: 无
 #鱼眼校正
 https://www.zywvvd.com/notes/study/camera-imaging/fisheye-cali/fisheye-cali/#%E7%95%B8%E5%8F%98%E7%9F%AB%E6%AD%A3
 
+# Using an I2C infrared camera
+https://www.yoctopuce.com/EN/article/using-an-i2c-infrared-camera
+
+
+1. 相机简史 	https://blog.csdn.net/liujun3512159/article/details/124371792
+2. 安卓相机架构概览 	https://blog.csdn.net/liujun3512159/article/details/124371977
+3. 应用层 	https://blog.csdn.net/liujun3512159/article/details/124372917
+4. 服务层 	https://blog.csdn.net/liujun3512159/article/details/124374440
+5. 硬件抽象层 	https://blog.csdn.net/liujun3512159/article/details/124391598
+6. 硬件抽象层实现 	https://blog.csdn.net/liujun3512159/article/details/124392153
+7. 驱动层 V4L2框架	https://blog.csdn.net/liujun3512159/article/details/124393178
+8. 高通KMD	https://blog.csdn.net/liujun3512159/article/details/124393277
+9. 硬件层 	https://blog.csdn.net/liujun3512159/article/details/124416237
+10. 安卓相机架构总结 	https://blog.csdn.net/liujun3512159/article/details/124416344
+11. 手机相机的未来与发展 	https://blog.csdn.net/liujun3512159/article/details/124416367
 
 

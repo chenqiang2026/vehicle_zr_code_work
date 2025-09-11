@@ -1404,5 +1404,8 @@ test case: 无
 
   os.system("adb shell ./vendor/bin/hw/cameramanagerextAutoTest startsafe_close")
 
+#鱼眼校正
+https://www.zywvvd.com/notes/study/camera-imaging/fisheye-cali/fisheye-cali/#%E7%95%B8%E5%8F%98%E7%9F%AB%E6%AD%A3
+
 
 

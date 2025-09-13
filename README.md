@@ -1423,4 +1423,17 @@ https://www.yoctopuce.com/EN/article/using-an-i2c-infrared-camera
 10. 安卓相机架构总结 	https://blog.csdn.net/liujun3512159/article/details/124416344
 11. 手机相机的未来与发展 	https://blog.csdn.net/liujun3512159/article/details/124416367
 
+https://docs.radxa.com/nio/nio12l/hardware-design/hardware-interface
+硬件接口说明
+
+<img width="2700" height="1738" alt="image" src="https://github.com/user-attachments/assets/e800cf6b-d5c8-4f3c-aa13-185573e53ba8" />
+
+<img width="2700" height="1738" alt="image" src="https://github.com/user-attachments/assets/3ebb695c-d5b3-43d4-b052-5fc44e1978b3" />
+
+
+
+
+
+    
+
 

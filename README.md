@@ -1422,6 +1422,7 @@ https://www.yoctopuce.com/EN/article/using-an-i2c-infrared-camera
 9. 硬件层 	https://blog.csdn.net/liujun3512159/article/details/124416237
 10. 安卓相机架构总结 	https://blog.csdn.net/liujun3512159/article/details/124416344
 11. 手机相机的未来与发展 	https://blog.csdn.net/liujun3512159/article/details/124416367
+12. https://blog.csdn.net/djfjkj52/article/details/137497593
 
 https://docs.radxa.com/nio/nio12l/hardware-design/hardware-interface
 硬件接口说明

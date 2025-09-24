@@ -1431,6 +1431,90 @@ https://docs.radxa.com/nio/nio12l/hardware-design/hardware-interface
 
 <img width="2700" height="1738" alt="image" src="https://github.com/user-attachments/assets/3ebb695c-d5b3-43d4-b052-5fc44e1978b3" />
 
+Scrcpy投屏软件，下载需要配置环境变量，不配置默认在exe所在的文件夹上面执行cmd 。就可以打开投屏软件。
+adb shell mount -o remount,rw /vendor /odm /system 
+out/release/packages/ivi/system_z/system/lib64/libradioservice.z.so
+
+Gerrrit常用命令:
+git branch -a ,git branch -vv ;
+git status
+git log
+git pull -r
+git remote -v
+git diff --cached
+git rebase -i
+git reset --hard HEAD~1
+git branch -d 
+gis stash
+git stash
+git checkout --.(重要)
+chmod 777  -R ./
+git rebase -i HEAD~2
+git config --global core.editor vim
+
+执行以下命令，配置hook
+curl -Lo .git/hooks/commit-msg http:/xxx/hooks/commit-msg
+chmod +x .git/hooks/commit-msg
+
+丢弃修改，直接拉取新代码
+repo sync -d
+repo forall -c 'git reset --hard'repo forall -c 'git clean -f -d'
+repo sync -c
+git cherry-pick -x  commit Hash
+周立功 ：
+通道0:私有CAN
+通道1 公共CAN
+通道２ 公共CAN  
+通道３:私有CAN
+
+
+
+ 
+
+
+
+
+someipsd.entry.serviceid == 0xserviceId and someip.serviceid==0xserviceId
+
+
+git push origin HEAD:refs/for/branch_name
+git commit -m '
+TicketNo:
+Description:
+Team:
+Feature or Bugfix:
+Change-Id: dfadffdasfsfadsfasdfasfhash
+'
+  //将别人提交到Gerrit中的代码 下载到本地
+ git fetch http://chenq@gerrit_url refs/changes/数字/数字/1 && git cherry-pick FETCH_HEAD
+ git cherry-pick --continue
+ 周立功ZcanPro ,CanOE
+ git checkout -b local_branch  remote_branch/local_branch
+
+ 刷机/刷台架
+
+ log 技巧
+  setprop  Key Value ,  getprop  Key
+   rm -rf /
+   ps -A |grep 
+   logcat |grep 
+ MCU  AT 指令
+ 
+   
+   
+  
+ 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
 
 
 

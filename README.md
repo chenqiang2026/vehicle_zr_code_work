@@ -1500,15 +1500,9 @@ Change-Id: dfadffdasfsfadsfasdfasfhash
    logcat |grep 
  MCU  AT 指令
 
+https://chinese.alibaba.com/product-detail/MAX9296-GMSL-Camera-Board-Waveshare-Equipped-1601349270339.html   
+ 
 https://chinese.alibaba.com/product-detail/MAX9296-GMSL-Camera-Board-Waveshare-Equipped-1601349270339.html
-
- 
- 
-   
-   
-  
- 
-
  
  
  

@@ -1502,8 +1502,7 @@ Change-Id: dfadffdasfsfadsfasdfasfhash
 
 https://chinese.alibaba.com/product-detail/MAX9296-GMSL-Camera-Board-Waveshare-Equipped-1601349270339.html   
  
-https://chinese.alibaba.com/product-detail/MAX9296-GMSL-Camera-Board-Waveshare-Equipped-1601349270339.html
- 
+https://blog.csdn.net/2301_77080582/article/details/144116584 
  
  
 

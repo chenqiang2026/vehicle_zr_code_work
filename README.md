@@ -1503,6 +1503,463 @@ Change-Id: dfadffdasfsfadsfasdfasfhash
 https://chinese.alibaba.com/product-detail/MAX9296-GMSL-Camera-Board-Waveshare-Equipped-1601349270339.html   
  
 https://blog.csdn.net/2301_77080582/article/details/144116584 
+
+vsomeip.json
+{
+  "logging": {
+    "level": "info",
+    "console": "false",
+    "syslog": {
+      "enable": "true"
+    }
+  },
+  "routing": "someipd",
+  "services": [],
+  "clients": [
+    {
+      "service": "27665",
+      "instance": "1",
+      "is_signal": "false",
+      "initial_delay_min": "0",
+      "initial_delay_max": "100",
+      "repetitions_base_delay": "30",
+      "repetitions_max": "3",
+      "ttl": "3",
+      "reliable": [
+        "30501"
+      ],
+	  "strict-port": "true",
+      "eventgroups": [
+        {
+          "eventgroup": "1"
+        },
+        {
+          "eventgroup": "2"
+        },
+        {
+          "eventgroup": "3"
+        }
+      ]
+    }
+  ]
+}
+
+someipd.json
+
+{
+  "unicast" : "192.168.40.7",
+  "netmask" : "255.255.255.0",
+  "active-if-status-checking": "false",
+  "diagnosis" : "0x45",
+  "diagnosis_mask" : "0xff00",
+  "network" : "someip",
+  "tls_version" : "TLS1_3_VERSION",
+  "alg_Type" : 1,
+  "work_mode" : 0,
+  "logging" :
+  {
+    "level" : "info",
+    "console" : "false",
+    "file" : {"enable" : "false", "path" : "/tmp/someip.log", "size" : "10485760", "num" : "5"},
+    "syslog" : { "enable" : "true" }
+  },
+  "enable_sched_rr" : "false",
+  "applications" :
+  [
+      {
+          "name" : "someipd",
+          "id" : "0x1240",
+          "max_dispatchers" : "8",
+          "threads" : "8"
+      },
+      {
+          "name" : "Huap",
+          "id" : "0x1278",
+          "max_dispatchers" : "1",
+          "threads" : "2"
+      },
+      {
+          "name" : "TBoxHal",
+          "id" : "0x1343",
+          "max_dispatchers" : "1",
+          "threads" : "2"
+      },
+      {
+          "name" : "AdsHal",
+          "id" : "0x1355",
+          "max_dispatchers" : "8",
+          "threads" : "8"
+      }
+  ],
+  "services" :
+  [
+      {
+          "service" : "0x4009",
+          "instance" : "0x0001",
+          "reliable" : "30507"
+      },
+      {
+          "service" : "0x8D0B",
+          "instance" : "0x0001",
+          "reliable" : "30507"
+      },
+      {
+          "service" : "0x8D01",
+          "instance" : "0x0001",
+          "reliable" : "30507"
+      }
+  ],
+  "clients" :
+  [
+      {
+        "service" : "0x6809",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6802",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6803",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6801",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6801",
+        "instance" : "0x0002",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6851",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4010",
+        "instance" : "0x0002",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C03",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C0B",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C11",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C14",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C07",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C19",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C0A",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C16",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C0C",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C02",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C10",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C09",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6C17",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4010",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x8D07",
+        "instance" : "0x0002",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4421",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x8D06",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6501",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x6501",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6407",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x6407",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6406",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x6406",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x64A1",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x64A1",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6408",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x6408",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x6306",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x6306",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x850E",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4710",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x8D05",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x64A2",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x64A2",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x650C",
+        "instance" : "0x0002",
+        "reliable" : ["30514"]
+      },
+      {
+        "service" : "0x650C",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4701",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4305",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4303",
+        "instance" : "0x0001",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4303",
+        "instance" : "0x0002",
+        "reliable" : ["30501"]
+      },
+      {
+        "service" : "0x4303",
+        "instance" : "0x0004",
+        "reliable" : ["30501"]
+      }
+  ],
+ "ssl-address": {
+     "ssl-idu-address": ["192.168.40.26:30507"],
+     "ssl-tbox-address": ["192.168.40.254:30507","192.168.40.254:41001","192.168.40.254:41002","192.168.40.254:41003"],
+     "ssl-cdc-address": ["192.168.40.7:30507"],
+     "ssl-zcu_r-address": ["192.168.40.1"],
+     "ssl-zcu_l-address": ["192.168.40.2"]
+ },
+ "routing": "someipd",
+ "service-discovery" :
+ {
+   "enable" : "true",
+   "multicast" : "239.128.60.1",
+   "port" : "30490",
+   "protocol" : "UDP",
+   "initial_delay_min" : "0",
+   "initial_delay_max" : "100",
+   "repetitions_base_delay" : "30",
+   "repetitions_max" : "3",
+   "ttl" : "3",
+   "cyclic_offer_delay" : "1000",
+   "request_response_delay_min" : "0",
+   "request_response_delay_max" : "0"
+  }
+}
+
+vsomeip_cm.json
+
+{
+  "applicationName": "/SoftwareComponent/AdaptiveApplicationSwComponentType/CSI_INI_GNSS_CDC/Process_CSI_INI_GNSS_CDC",
+  "services": [
+    {
+      "service": "/Service/ServiceInterface/INI_GNSS",
+      "serviceId": 27665,
+      "protocolIdUsed": true,
+      "majorVersion": 1,
+      "minorVersion": 1,
+      "events": [
+        {
+          "event": "gnssInfoRpt",
+          "id": 9653,
+          "dataType": "/DataType/StdCppImplDataType/ns/ini_gnss/GnssInfo",
+          "eventId": 32769,
+          "eventGroup": [
+            1
+          ],
+          "reliable": true
+        },
+        {
+          "event": "lbsInfoRpt",
+          "id": 28070,
+          "dataType": "/DataType/StdCppImplDataType/ns/ini_gnss/LbsInfo",
+          "eventId": 32770,
+          "eventGroup": [
+            2
+          ],
+          "reliable": true
+        },
+        {
+          "event": "gnssRawInfoRpt",
+          "id": 22411,
+          "dataType": "/DataType/StdCppImplDataType/ns/ini_gnss/GnssRawInfo",
+          "eventId": 32771,
+          "eventGroup": [
+            2
+          ],
+          "reliable": true
+        }
+      ],
+      "fields": [],
+      "methods": [],
+      "instances": [
+        {
+          "instance": "1",
+          "isClient": true,
+          "shortName": "/ServiceInstantiation/SOMEIPServiceInstantiation/SOMEIPServiceInstance/CSI_INI_GNSS_CDC",
+          "vlan": "someip",
+          "reliable": "30501",
+          "unreliable": "30501",
+          "network": "someip",
+          "minorVersion": "1",
+          "unicast": "192.168.40.7", //26
+          "events": [
+            {
+              "id": 9653,
+              "dataIds": []
+            },
+            {
+              "id": 28070,
+              "dataIds": []
+            },
+            {
+              "id": 22411,
+              "dataIds": []
+            }
+          ],
+          "methods": [
+            {
+              "id": 27179,
+              "dataIds": []
+            }
+          ],
+          "fields": []
+        }
+      ]
+    }
+  ]
+}
+
  
  
 

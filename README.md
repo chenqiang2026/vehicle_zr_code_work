@@ -6,7 +6,7 @@
         repo sync
     268分支和流程文档的编译过程中都出现过错误；
     today work
-    和杨文勇熟悉业务流程；
+    和yangweny熟悉业务流程；
     根据技术文档和需求文档 熟悉业务流程
     zeekr/android/platform/vendor/zeekr/interfaces/camera
     zeekr/android/platform/vendor/zeekr/interfaces/impl/camera
@@ -16,7 +16,7 @@
     zeekr/android/platform/vendor/zeekr/interfaces/impl/carcameramanager
  20241024 日报：
     1：阅读confirence 入职流程文档；查看Android 框架源码；
-    2： 和yangwenyo师现场熟悉了 紧急录音，视频；自动泊车，停摆泊车，哨兵模式
+    2： 和yangwenyo现场熟悉了 紧急录音，视频；自动泊车，停摆泊车，哨兵模式
 
 today work
     1：参考confurence入职流程文档 提交一个patch;

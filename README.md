@@ -1960,8 +1960,11 @@ vsomeip_cm.json
   ]
 }
 
- 
- 
+
+
+adb reboot bootloader
+fastboot flash boot boot.img
+fastboot reboot 
 
 
 

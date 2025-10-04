@@ -1,4 +1,4 @@
-<img src="http://chenqiang2026/picgo-github/main/picture/2%E9%BB%84%E9%9B%80.png"/>
+![](https://raw.githubusercontent.com/chenqiang2026/picgo-github/main/picture//picture/%20cache-line.png)
 
 20241023 日报：
  1： 下载并且编译 

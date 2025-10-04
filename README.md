@@ -237,6 +237,7 @@ Test suggest: 只增加注释, 没有更改代码, 无需测试.
 test case: 无.
 
  git gerrit
+ ![](chenqiang2026/picgo-github/main/picture/2%E4%BA%91%E5%BD%A9.jpg)
 
 git push origin HEAD:refs/for/zeekr_mainline_dev
 

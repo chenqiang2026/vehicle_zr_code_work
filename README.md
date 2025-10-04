@@ -1,4 +1,5 @@
-http://chenqiang2026/picgo-github/main/picture/2chiphaswellep2_2x-1604551910772.jpg
+<img src="http://chenqiang2026/picgo-github/main/picture/2%E9%BB%84%E9%9B%80.png"/>
+
 20241023 日报：
  1： 下载并且编译 
      DC1E OS6.2交付分支（2024.8.27）：

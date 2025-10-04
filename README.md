@@ -1,3 +1,5 @@
+![](chenqiang2026/picgo-github/main/picture/2%E4%BA%91%E5%BD%A9.jpg)
+
 20241023 日报：
  1： 下载并且编译 
      DC1E OS6.2交付分支（2024.8.27）：

@@ -1969,6 +1969,16 @@ adb reboot bootloader
 fastboot flash boot boot.img
 fastboot reboot 
 
+camera:
+1、从故障管理系统网站查看0x80F58002故障码的信息，确认是ISP检测到外部输入错误的故障（点击故障码可以看到详细信息）：
+
+2、查看device-0、drv_camera.log日志，的确有相关打印：
+ 
+3、出现这个故障的原因是ISP的stream router收到的图像数据内容错误，可以从以下2点进一步分析：
+3.1 Camera模组及线缆问题，导致解串器收到的数据异常。可以看解串器是否有错误日志打印或上报故障。
+3.2 解串器或解串器至SOC的硬件链路问题。可以dump同一个解串器的4路raw图（colorbar）看MD5值是否一样（预期colorbar图的MD5是固定值）。
+装备测试使用的是工具板模拟Camera模组出图，即串行器出colorbar图。
+
 
 
 

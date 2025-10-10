@@ -1981,6 +1981,111 @@ camera:
 
 使用了someip协议的用例都需要先运行someipd进程。
 
+英文简称	英文全称	中文含义
+AE	Automatic Exposure 	自动曝光
+AEC	Automatic Exposure Control	自动曝光控制
+AF	Automatic Focus	自动调焦
+AGC	Automatic Gain Control	自动增益控制
+ALC	Automatic Luminance Control 	自动亮度控制
+AWB	Automatic White Balance	自动白平衡
+CCI	Camera Control Interface  	摄像头控制接口
+CDAF	Contrast Detection Auto Focus	对比度检测自动对焦
+CSI	Camera Serial Interface 	摄像头串行接口    
+DSI	Display Serial Interface 	显示串行接口
+DTS	Device Tree Source	设备树资源
+EOF	End Of Frame 	帧结束
+EOT	End Of Transmission  	传输结束
+FF	Fixed Focus	固定焦距
+FOV	Field Of Vision 	视场角
+HDR	High Dynamic Range	高动态范围
+HTS	Horizontal Total Size	水平总像素
+ISP 	Image Signal Processor 	图像信号处理器
+MIPI	Mobile Industry Processor Interface	移动产业处理器接口
+OIS	Optical Image Stablization   	光学防抖
+OTP	One Time Programmable	一次性可编程
+PDAF	Phase Detection Auto Focus	相位差检测自动对焦
+PMIC	Power Management Ic    	电源管理集成电路
+PMU	Power Management Unit   	电源管理单元
+SMIA	Standard Mobile Imaging Architecture	标准移动图像处理体系
+SOF	Start Of Frame	帧开始
+SOT	Start Of Transmission 	传输开始
+VTS	Vertical Timing Size /Vertical Total Size	纵向总行数处理时间大小（即 tline 的行数倍数）/垂直总像素
+AM	 Algo Manager FW	算法集成管理模块
+AIS 	Algorithm Integrated subsyetem 	算法集成子系统
+BE 	Back End ISP	后端处理模块
+BEVC	 Back End for Video or Capture 	用于录像或拍照的后端模块
+BPE 	Back end and Post End 	 后端与后处理端
+CBE 	Capture Back End	 ISP拍照后端处理模块
+CRAW 	Capture Raw 	ISP拍照RAW处理模块
+CIS  	Class Imaging System/CMOS Image Sensor	 图像系统类/CMOS图像传感器
+CFA 	Color Filter Array 	彩色滤波阵列
+DPC  	D? Shield Pixel Correction Map 	坏点像素矫正
+DMAP	Depth Map Module 	深度信息模块
+比如：ANDROID_HW_DMAP_ACTIVE_ARRAY_SIZE
+ESD	Electro-Static discharge 	静电放电
+ext 	extra 	附加信息
+比如 cis_init_ext_settings 或 cis_info_ex
+FE 	Front End	ISP前端处理模块
+fps 	frames per second 	每秒帧数即帧率
+FMH 	Filter Manager Hardware 	滤波管理器硬件
+比如IFilterManagerHardware 滤波管理器硬件接口，i 指 Interface
+HIST  	Histogram 	直方图
+Ipp	image post process 	图像后处理
+比如： bool needIpp(CDataTable& dt)
+Inf 	infinite	极远对焦
+比如：otp->leftInfinite_temp0 = otpInf;  // master horizontal AF INF(5m)
+Intf	interface 	接口
+比如：CIntfPtr<IImagingStage> rmISP
+LC 	line count 	行数
+比如：SENSOR_AEC_OP_LC
+LSC	 Lens Shading Correction	镜头阴影矫正
+比如： LSC_OTP_LENGTH
+LTC	 Local tone mapping control 	本地亮度映射
+比如：TC_LTC_RATIO_1
+mcm 	Multi Camera Manager 	多摄像头管理器， 比如 mcm_config_color_wide_rgb
+Marco 	　	微距
+比如： otp->leftMacro_temp0 = otpMarco; // master horizontal AF Marco(7cm) 
+MTF 	Modulation Transfer Function 	调制传递函数
+MWB	manual white balance 	手动白平衡
+OT工位  	OIS Test work station 	光学防抖性能测试产线工位
+OSI 	Optical Image Stabilization 	图像光学防抖
+PE 	Post End 	ISP后处理模块
+PQ	Picture Quality	图像质量 
+ROI	Region of interest 	感兴趣区域
+SFR 	spatial frequency response 	空间频率响应
+sp 	smart pointer 	智能指针
+比如 android::sp<HardwarePrepare> spSensorHardware
+tc 	Tone Control 	色调控制
+比如 TC_POST_GAIN， Digital Gain after tone control
+tof 	time of flight 	飞行时间，深度输出
+tline 	time of  eache line 	 每行的时间消耗 /一行的曝光时间
+tele 	　	远度/长焦摄像头
+UI	User Interface	用户界面
+VBE	Video Back End	ISP预览录像后端处理模块
+VCM 	Vibrate control manager 	马达控制器
+比如 LOG_MODULE_VCM_DW9800
+VRAW 	Video Raw	ISP预览录像RAW处理模块
+ZSL 	zero shutter lag 	零延时拍照，是为了减少拍照延时,让拍照&回显瞬间完成的一种技术。比如： ANDROID_HW_ZSL_SUPPORTED
+PDAF	Phase Detection Auto Focus	相位差检测自动对焦
+CFA	Color Filter Array	 彩色滤波阵列
+tline	time of each line	 每行的时间消耗 /一行的曝光时间
+OCL	On Chip Lens	片上镜头
+FDOL	Full Digital Over Lap	　
+NDOL	None Digital Over Lap	　
+DCG/TCG	Dual/Triple Conversion Gain	　
+AE	Auto Exposure	自动曝光
+ROI	Region of interest 	感兴趣区域
+OIS	Optical Image Stablization	光学图像防抖
+EIS	Electronic image stabilization	电子图像防抖/电子防抖/电子稳像
+PQ	Picture Quality	图像质量
+MD	Motion Detection	运动检测
+ALS	Ambient Light Sensing	环境光感知
+OPB	Optical Black Pixel	光学黑点
+CDS	Correlation double sampling	相关双采样
+DTI	Deep Trench Isolation	深沟隔离
+CMOS	Complementary Metal Oxide Semicondutor 	互补金属氧化物半导体
+CIS  	CMOS Image Sensor	CMOS图像传感器
+
 
 
 

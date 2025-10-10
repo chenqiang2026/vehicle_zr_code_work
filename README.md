@@ -1979,6 +1979,9 @@ camera:
 3.2 解串器或解串器至SOC的硬件链路问题。可以dump同一个解串器的4路raw图（colorbar）看MD5值是否一样（预期colorbar图的MD5是固定值）。
 装备测试使用的是工具板模拟Camera模组出图，即串行器出colorbar图。
 
+使用了someip协议的用例都需要先运行someipd进程。
+
+
 
 
 

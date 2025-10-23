@@ -4,29 +4,29 @@
  1： 下载并且编译 
      DC1E OS6.2交付分支（2024.8.27）：
        Android：
-        repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
+        repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
         repo sync
     268分支和流程文档的编译过程中都出现过错误；
     today work
     和yangweny熟悉业务流程；
     根据技术文档和需求文档 熟悉业务流程
-    zeekr/android/platform/vendor/zeekr/interfaces/camera
-    zeekr/android/platform/vendor/zeekr/interfaces/impl/camera
-    zeekr/android/platform/vendor/zeekr/modules/cameradevicemanager
-    zeekr/android/platform/vendor/zeekr/modules/soundrecorder
-    zeekr/android/platform/vendor/zeekr/interfaces/carcameramanager
-    zeekr/android/platform/vendor/zeekr/interfaces/impl/carcameramanager
+    zr/android/platform/vendor/zr/interfaces/camera
+    zr/android/platform/vendor/zr/interfaces/impl/camera
+    zr/android/platform/vendor/zr/modules/cameradevicemanager
+    zr/android/platform/vendor/zr/modules/soundrecorder
+    zr/android/platform/vendor/zr/interfaces/carcameramanager
+    zr/android/platform/vendor/zr/interfaces/impl/carcameramanager
  20241024 日报：
     1：阅读confirence 入职流程文档；查看Android 框架源码；
     2： 和yangwenyo现场熟悉了 紧急录音，视频；自动泊车，停摆泊车，哨兵模式
 
 today work
     1：参考confurence入职流程文档 提交一个patch;
-    2:申请 vendor/zeekr/interface（modules） 其他模块的代码，单独编译
+    2:申请 vendor/zr/interface（modules） 其他模块的代码，单独编译
     3：申请svn ：13：3690、IVI 权限
     4：熟悉JFrog刷机
     5： 编译自己的库 ，自己打印一些log,推到车机里面，跑起来。   
-    pwd: /home/e-qiang.chen3/snc-android/test_device/lagvm/LINUX/android
+    pwd: /home/yyy/snc-android/test_device/lagvm/LINUX/android
 
 20241025 日报：
     1：参考confurence入职流程文档 提交一个patch，已完成。没有caseId号码；
@@ -34,30 +34,30 @@ today work
     3：申请svn ：13：3690、IVI 权限 已申请完成
     today work 
     1: cameradevicemanager 单独编译报错，今天解决
-    2：代码路径：vendor/zeekr/interfaces/impl/carcameramanager
+    2：代码路径：vendor/zr/interfaces/impl/carcameramanager
     [8295DHU][IVI]CarCameraManager 注释密度提升
 
 20241026 日报：
 
-    1、主线分支 zeekr_mainline_dev 的 CarCameraManager 编译通过
+    1、主线分支 zr_mainline_dev 的 CarCameraManager 编译通过
 
     2、参考 gerrit 提交 ，补充注释密度
 
-        vendor/zeekr/interfaces/impl/carcameramanager
+        vendor/zr/interfaces/impl/carcameramanager
 
         git branch
 
-        ​zeekr_release_sa8295p_postcs_ef_110
+        ​zr_release_sa8295p_postcs_ef_110
 
-        ​git checkout (-b) zeekr_mainline_dev 
+        ​git checkout (-b) zr_mainline_dev 
 
-        ​git checkout  zeekr_mainline_dev 
+        ​git checkout  zr_mainline_dev 
 
-        ​cd  vendor/zeekr/interfaces/impl/carcameramanager
+        ​cd  vendor/zr/interfaces/impl/carcameramanager
 
-        ​/home/e-qiang.chen3/snc-android/hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces/impl/carcameramanager/1.0
+        ​/home/yyy/snc-android/hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces/impl/carcameramanager/1.0
 
-        cd /vendor/zeekr/interfaces/impl/carcameramanager/1.0
+        cd /vendor/zr/interfaces/impl/carcameramanager/1.0
 
         mm -B
 
@@ -69,37 +69,37 @@ today work
 
         ​    Android：
 
-        ​    repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
+        ​    repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
 
         ​    repo sync
 
         ​      268分支和流程文档的编译过程中都出现过错误；
 
-        https://devops-confluence.zeekrlife.com/pages/viewpage.action?pageId=102184438
+        https://devops-confluence.zrlife.com/pages/viewpage.action?pageId=102184438
 
-        zeekr_repo init -b zeekr_develop_sa8295p_postcs -m 3rd.xml
+        zr_repo init -b zr_develop_sa8295p_postcs -m 3rd.xml
 
-        zeekr_repo sync
+        zr_repo sync
 
-    zeekr_develop_sa8295p_postcs 分支:
+    zr_develop_sa8295p_postcs 分支:
 
     cd test_device/lagvm/LINUX/android/
 
-    zeekr_build
+    zr_build
 
     source build/envsetup.sh
 
-    lunch zeekr_dhu-userdebug  （user版本 lunch zeekr_dhu-user）
+    lunch zr_dhu-userdebug  （user版本 lunch zr_dhu-user）
 
-    lunch zeekr_dhu_sa8295-userdebug
+    lunch zr_dhu_sa8295-userdebug
 
-    export ZEEKR_PROJECT_NAME="ONEIMAGE-POSTCS1"
+    export zr_PROJECT_NAME="ONEIMAGE-POSTCS1"
 
-    export PRODUCT_ZEEKR_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
+    export PRODUCT_zr_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
 
     make
 
-    e-qiang.chen3@android:~/android_zeekr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/build$ lunch
+    yyy@android:~/android_zr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/build$ lunch
 
     You're building on Linux
 
@@ -184,36 +184,36 @@ today work
     77. uml-userdebug
     78. yukawa-userdebug
     79. yukawa_sei510-userdebug
-    80. zeekr_dhu_sa8295-user
-    81. zeekr_dhu_sa8295-userdebug
-    82. zeekr_dhu_sa8295_r-user
-    83. zeekr_dhu_sa8295_r-userdebug
+    80. zr_dhu_sa8295-user
+    81. zr_dhu_sa8295-userdebug
+    82. zr_dhu_sa8295_r-user
+    83. zr_dhu_sa8295_r-userdebug
 
     out/soong/.bootstrap/soong-sdk
 
-    out/target/product/zeekr_dhu_sa8295/data/fuzz/arm64/vendor.zeekr.hardware.carcameramanager@1.0-vts.fuzzer/vendor.zeekr.hardware.carcameramanager@1.0-vts.fuzzer
+    out/target/product/zr_dhu_sa8295/data/fuzz/arm64/vendor.zr.hardware.carcameramanager@1.0-vts.fuzzer/vendor.zr.hardware.carcameramanager@1.0-vts.fuzzer
 
-    zeekr_develop_sa8295p_postcs
+    zr_develop_sa8295p_postcs
 
     这个分支上新建impl
 
-    ///android_zeekr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces/
+    ///android_zr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces/
 
-    单独编译 /vendor/zeekr/interfaces/impl/carcameramanager
+    单独编译 /vendor/zr/interfaces/impl/carcameramanager
 
     pwd:
 
-    hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces
+    hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces
 
     cd .
 
-    pwd:/vendor/zeekr/interfaces
+    pwd:/vendor/zr/interfaces
 
     mkdir -p impl
 
     cd cd impl/
 
-    访问 ：https://snc-gerrit.zeekrlife.com/admin/repos
+    访问 ：https://snc-gerrit.zrlife.com/admin/repos
 
     git clone url
 
@@ -222,7 +222,7 @@ today work
     ls
     mm
     /**
-    * 函数名: ZeekrAudioManager
+    * 函数名: zrAudioManager
     * 描述: 
     * 参数:
     * 返回值:
@@ -241,7 +241,7 @@ test case: 无.
  git gerrit
  ![](chenqiang2026/picgo-github/main/picture/2%E4%BA%91%E5%BD%A9.jpg)
 
-git push origin HEAD:refs/for/zeekr_mainline_dev
+git push origin HEAD:refs/for/zr_mainline_dev
 
 git config --global core.autocrlf false 
 
@@ -249,7 +249,7 @@ git config --global core.autocrlf false
 
 2024年11月2日
 
-https://devops-confluence.zeekrlife.com/pages/viewpage.action?pageId=61798636
+https://devops-confluence.zrlife.com/pages/viewpage.action?pageId=61798636
 
 新建文件夹：
 
@@ -257,38 +257,38 @@ aptiv_develop_sa8295p_postcs1_270:
 
 切换到docker环境
 
-zeekr_build;
+zr_build;
  1： 下载并且编译 
    DC1E OS6.2交付分支（2024.8.27）：
 ​    Android：
-​    老版本不对:  repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 
+​    老版本不对:  repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 
 ​    repo sync
-   新版本 ： zeekr_repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 -m 3rd.xml
-​	zeekr_repo sync    
+   新版本 ： zr_repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 -m 3rd.xml
+​	zr_repo sync    
    cd test_device/lagvm/LINUX/android/
    source build/envsetup.sh
    lunch
     270分支
-    lunch zeekr_dhu-userdebug
+    lunch zr_dhu-userdebug
     选择 userdebug版本 
-    export ZEEKR_PROJECT_NAME="ONEIMAGE-POSTCS1"
-    export PRODUCT_ZEEKR_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
+    export zr_PROJECT_NAME="ONEIMAGE-POSTCS1"
+    export PRODUCT_zr_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
     make -j8
 
 \```
 
 2024年11月5日日报
 
-    Z:\android_zeekr_develop_sa8295p_postcs\hlos_dev_la\lagvm\LINUX\android\device\zeekr\sa8295_common\config\watermark
-    android/device/zeekr/sa8295_common/config/watermark 你自己下到堡垒机上
+    Z:\android_zr_develop_sa8295p_postcs\hlos_dev_la\lagvm\LINUX\android\device\zr\sa8295_common\config\watermark
+    android/device/zr/sa8295_common/config/watermark 你自己下到堡垒机上
 
-    hlos_dev_la/lagvm/LINUX/android/device/zeekr/sa8295_common/config/watermark$
+    hlos_dev_la/lagvm/LINUX/android/device/zr/sa8295_common/config/watermark$
 
     **__FILE__** ：正在编译文件的文件名**__LINE__** ：正在编译文件的行号 DATE__**：编译时刻的日期字符串 如“Sep 22 2020”
 
     TIME__**：编译时刻的时间字符串 如”10:00:00“  STDC__**：判断该文件是不是标准C程序 **__func__**：它指示所在的函数
 
-    zeekr_onCameraDataChangeNotify(const ZeekrCamMsg &msg) {
+    zr_onCameraDataChangeNotify(const zrCamMsg &msg) {
 
     // std::chrono::system_clock::time_point now_time = std::chrono::system_clock::now();
 
@@ -302,7 +302,7 @@ zeekr_build;
 
     // std::thread::id this_id = std::this_thread::get_id();
 
-    // cout << "enter zeekr_onCameraDataChangeNotify 回调函数,线程id:" << this_id << endl;
+    // cout << "enter zr_onCameraDataChangeNotify 回调函数,线程id:" << this_id << endl;
 
     // std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
@@ -322,9 +322,9 @@ zeekr_build;
 
     // if(zKKER_CameraDeviceStatus==ZKKER_CameraDeviceStatus::CAMERA_DEVICE_STATUS_CONNECTED){
 
-    https://devops-jira.zeekrlife.com/secure/RapidBoard.jspa?rapidView=2466&projectKey=SNC8295&view=planning&selectedIssue=SNC8295-6395&quickFilter=7231&issueLimit=100
+    https://devops-jira.zrlife.com/secure/RapidBoard.jspa?rapidView=2466&projectKey=SNC8295&view=planning&selectedIssue=SNC8295-6395&quickFilter=7231&issueLimit=100
 
-    https://devops-jira.zeekrlife.com/browse/SNC8295-6395
+    https://devops-jira.zrlife.com/browse/SNC8295-6395
 
     command = ['ffprobe', '-show_frames', '-print_format', 'json', video_file]
 
@@ -374,31 +374,31 @@ zeekr_build;
 
     | ------------------------------------------------------- | -------- | ------------- | ---------------- | ---- | ---- |
 
-    | samba                          |     | e-qiang.chen3 | 6J9xwJoWoZHG6o$t |   |   |
+    | samba                          |     | yyy | 6J9xwJoWoZHG6o$t |   |   |
 
-    | 10.136.137.97                      | 云堡垒机 | e-Qiang.Chen3 | 0537692@Hzw   |   |   |
+    | 10.136.137.97                      | 云堡垒机 | yyy | 0537692@Hzw   |   |   |
 
-    | https://hw-gerrit-dmz.zeekrlife.com           |     | e-qiang.chen3 | ZhLqgi6D8m    |   |   |
+    | https://hw-gerrit-dmz.zrlife.com           |     | yyy | ZhLqgi6D8m    |   |   |
 
     |                             |     |        |         |   |   |
 
-    | https://snc-gerrit.zeekrlife.com/admin/repos      |     |        |         |   |   |
+    | https://snc-gerrit.zrlife.com/admin/repos      |     |        |         |   |   |
 
     | http://10.114.198.13:3690/SNC_Cockpit/软件开发/Team/IVI | svn   | e_Qiang.Chen3 | 0537692@Hzw   |   |   |
 
 
 
-    1：e-Qiang.Chen3
+    1：yyy
 
-    e-qiang.chen3
+    yyy
 
     0537692@Hzw
 
-    https://sre-cmdb.zeekrlife.com/#/wkf-form/execute/account/ramuser/5617 
+    https://sre-cmdb.zrlife.com/#/wkf-form/execute/account/ramuser/5617 
 
     samba
 
-    账号 : e-qiang.chen3 
+    账号 : yyy 
 
     密码 : 6J9xwJoWoZHG6o$t
 
@@ -406,27 +406,27 @@ zeekr_build;
 
     云堡垒机用户名密码
 
-    https://jump.zeekrlife.com
+    https://jump.zrlife.com
 
-    e-Qiang.Chen3
+    yyy
 
     0537692@Hzw
 
-    SSH e-qiang.chen3@10.136.137.97:29992(zk-snc-full-build-rd-dev-ecs02)
+    SSH yyy@10.136.137.97:29992(zk-snc-full-build-rd-dev-ecs02)
 
-    \\10.136.137.97\e-qiang.chen3
+    \\10.136.137.97\yyy
 
-    账户：e-qiang.chen3
+    账户：yyy
 
     密码：ZhLqgi6D8m
 
-    https://hw-gerrit-dmz.zeekrlife.com
+    https://hw-gerrit-dmz.zrlife.com
 
-    https://snc-gerrit.zeekrlife.com/settings/
+    https://snc-gerrit.zrlife.com/settings/
 
     buFNCm4jFawNEVRmdxspVPavp4Bv55gE/PNVki9Z+w
 
-    https://hw-gerrit-dmz.zeekrlife.com/settings/
+    https://hw-gerrit-dmz.zrlife.com/settings/
 
     SNMbfbTAfzwAFsMrWZhD4HeuQdig7IY1OCiunP9RNw
 
@@ -434,37 +434,37 @@ zeekr_build;
 
     Android：
 
-    ​    zeekr_repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_268
+    ​    zr_repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_268
 
-    ​    zeekr_repo sync
+    ​    zr_repo sync
 
     DC1E OS6.2交付分支（2024.8.27）：
 
     Android：
 
-​    zeekr_repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 -m 3rd.xml
+​    zr_repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270 -m 3rd.xml
 
-​    zeekr_repo sync
+​    zr_repo sync
 
 编译：
 
 cd test_device/lagvm/LINUX/android/
 
-zeekr_build
+zr_build
 
 source build/envsetup.sh
 
-lunch zeekr_dhu-userdebug  （user版本 lunch zeekr_dhu-user）
+lunch zr_dhu-userdebug  （user版本 lunch zr_dhu-user）
 
-export ZEEKR_PROJECT_NAME="ONEIMAGE-POSTCS1"
+export zr_PROJECT_NAME="ONEIMAGE-POSTCS1"
 
-export PRODUCT_ZEEKR_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
+export PRODUCT_zr_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
 
 make
 
 git代码仓库地址:
 
-https://snc-gerrit.zeekrlife.com/admin/repos
+https://snc-gerrit.zrlife.com/admin/repos
 
 SVN:
 
@@ -526,7 +526,7 @@ new_pass:0537692@Hzw
 
  6：按照文档流程实现代码编译
 
- 7：和杨文勇熟悉业务流程
+ 7：和yangwy熟悉业务流程
 
  20241023 日报：
 
@@ -536,7 +536,7 @@ new_pass:0537692@Hzw
 
 ​    Android：
 
-​    repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
+​    repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
 
 ​    repo sync
 
@@ -544,33 +544,33 @@ new_pass:0537692@Hzw
 
   today work
 
-  和杨文勇熟悉业务流程；
+  和yangwy熟悉业务流程；
 
   根据技术文档和需求文档 熟悉业务流程
 
-   zeekr/android/platform/vendor/zeekr/interfaces/camera
+   zr/android/platform/vendor/zr/interfaces/camera
 
-   zeekr/android/platform/vendor/zeekr/interfaces/impl/camera
+   zr/android/platform/vendor/zr/interfaces/impl/camera
 
-   zeekr/android/platform/vendor/zeekr/modules/cameradevicemanager
+   zr/android/platform/vendor/zr/modules/cameradevicemanager
 
-   zeekr/android/platform/vendor/zeekr/modules/soundrecorder
+   zr/android/platform/vendor/zr/modules/soundrecorder
 
-   zeekr/android/platform/vendor/zeekr/interfaces/carcameramanager
+   zr/android/platform/vendor/zr/interfaces/carcameramanager
 
-   zeekr/android/platform/vendor/zeekr/interfaces/impl/carcameramanager
+   zr/android/platform/vendor/zr/interfaces/impl/carcameramanager
 
   20241024 日报：
 
   1：阅读confirence 入职流程文档；查看Android 框架源码；
 
-  2： 和杨文勇老师现场熟悉了 紧急录音，视频；自动泊车，停摆泊车，哨兵模式
+  2： 和yangwy老师现场熟悉了 紧急录音，视频；自动泊车，停摆泊车，哨兵模式
 
   today work
 
    1：参考confurence入职流程文档 提交一个patch;
 
-   2:申请 vendor/zeekr/interface（modules） 其他模块的代码，单独编译
+   2:申请 vendor/zr/interface（modules） 其他模块的代码，单独编译
 
    3：申请svn ：13：3690、IVI 权限
 
@@ -578,13 +578,13 @@ new_pass:0537692@Hzw
 
    5： 编译自己的库 ，自己打印一些log,推到车机里面，跑起来。  
 
-pwd: /home/e-qiang.chen3/snc-android/test_device/lagvm/LINUX/android
+pwd: /home/yyy/snc-android/test_device/lagvm/LINUX/android
 
   20241025 日报：
 
   1：参考confurence入职流程文档 提交一个patch，已完成。没有caseId号码；
 
-  2：申请 vendor/zeekr/interface（modules） 其他模块的代码，单独编译 ，其中 cameradevicemanager 单独编译报错，今天解决；
+  2：申请 vendor/zr/interface（modules） 其他模块的代码，单独编译 ，其中 cameradevicemanager 单独编译报错，今天解决；
 
  3：申请svn ：13：3690、IVI 权限 已申请完成
 
@@ -592,29 +592,29 @@ pwd: /home/e-qiang.chen3/snc-android/test_device/lagvm/LINUX/android
 
  1: cameradevicemanager 单独编译报错，今天解决
 
-2：代码路径：vendor/zeekr/interfaces/impl/carcameramanager
+2：代码路径：vendor/zr/interfaces/impl/carcameramanager
 
   [8295DHU][IVI]CarCameraManager 注释密度提升
 
   20241026 日报：
 
-  1、主线分支 zeekr_mainline_dev 的 CarCameraManager 编译通过
+  1、主线分支 zr_mainline_dev 的 CarCameraManager 编译通过
 
   2、参考 gerrit 提交 ，补充注释密度
 
-vendor/zeekr/interfaces/impl/carcameramanager
+vendor/zr/interfaces/impl/carcameramanager
 
   git branch
 
-​    \* zeekr_release_sa8295p_postcs_ef_110
+​    \* zr_release_sa8295p_postcs_ef_110
 
-​    git checkout (-b) zeekr_mainline_dev 
+​    git checkout (-b) zr_mainline_dev 
 
-​    git checkout  zeekr_mainline_dev 
+​    git checkout  zr_mainline_dev 
 
-​    cd  vendor/zeekr/interfaces/impl/carcameramanager
+​    cd  vendor/zr/interfaces/impl/carcameramanager
 
-​    /home/e-qiang.chen3/snc-android/hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces/impl/carcameramanager/1.0   cd /vendor/zeekr/interfaces/impl/carcameramanager/1.0
+​    /home/yyy/snc-android/hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces/impl/carcameramanager/1.0   cd /vendor/zr/interfaces/impl/carcameramanager/1.0
 
    mm -B
 
@@ -630,37 +630,37 @@ vendor/zeekr/interfaces/impl/carcameramanager
 
 ​    Android：
 
-​    repo init -u https://snc-gerrit.zeekrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
+​    repo init -u https://snc-gerrit.zrlife.com/a/all/manifests -b aptiv_develop_sa8295p_postcs1_270
 
 ​    repo sync
 
    268分支和流程文档的编译过程中都出现过错误；
 
-   https://devops-confluence.zeekrlife.com/pages/viewpage.action?pageId=102184438
+   https://devops-confluence.zrlife.com/pages/viewpage.action?pageId=102184438
 
-  zeekr_repo init -b zeekr_develop_sa8295p_postcs -m 3rd.xml
+  zr_repo init -b zr_develop_sa8295p_postcs -m 3rd.xml
 
-  zeekr_repo sync
+  zr_repo sync
 
-zeekr_develop_sa8295p_postcs 分支:
+zr_develop_sa8295p_postcs 分支:
 
 cd test_device/lagvm/LINUX/android/
 
-zeekr_build
+zr_build
 
 source build/envsetup.sh
 
-lunch zeekr_dhu-userdebug  （user版本 lunch zeekr_dhu-user）
+lunch zr_dhu-userdebug  （user版本 lunch zr_dhu-user）
 
-lunch zeekr_dhu_sa8295-userdebug
+lunch zr_dhu_sa8295-userdebug
 
-export ZEEKR_PROJECT_NAME="ONEIMAGE-POSTCS1"
+export zr_PROJECT_NAME="ONEIMAGE-POSTCS1"
 
-export PRODUCT_ZEEKR_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
+export PRODUCT_zr_VEHICLE_TYPE="ONEIMAGE-POSTCS1"
 
 make
 
-e-qiang.chen3@android:~/android_zeekr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/build$ lunch
+yyy@android:~/android_zr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/build$ lunch
 
 You're building on Linux
 
@@ -745,36 +745,36 @@ Lunch menu... pick a combo:
 77. uml-userdebug
 78. yukawa-userdebug
 79. yukawa_sei510-userdebug
-80. zeekr_dhu_sa8295-user
-81. zeekr_dhu_sa8295-userdebug
-82. zeekr_dhu_sa8295_r-user
-83. zeekr_dhu_sa8295_r-userdebug
+80. zr_dhu_sa8295-user
+81. zr_dhu_sa8295-userdebug
+82. zr_dhu_sa8295_r-user
+83. zr_dhu_sa8295_r-userdebug
 
 out/soong/.bootstrap/soong-sdk
 
-out/target/product/zeekr_dhu_sa8295/data/fuzz/arm64/vendor.zeekr.hardware.carcameramanager@1.0-vts.fuzzer/vendor.zeekr.hardware.carcameramanager@1.0-vts.fuzzer
+out/target/product/zr_dhu_sa8295/data/fuzz/arm64/vendor.zr.hardware.carcameramanager@1.0-vts.fuzzer/vendor.zr.hardware.carcameramanager@1.0-vts.fuzzer
 
-zeekr_develop_sa8295p_postcs
+zr_develop_sa8295p_postcs
 
 这个分支上新建impl
 
-///android_zeekr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces/
+///android_zr_develop_sa8295p_postcs/hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces/
 
-单独编译 /vendor/zeekr/interfaces/impl/carcameramanager
+单独编译 /vendor/zr/interfaces/impl/carcameramanager
 
-pwd: hlos_dev_la/lagvm/LINUX/android/vendor/zeekr/interfaces
+pwd: hlos_dev_la/lagvm/LINUX/android/vendor/zr/interfaces
 
 cd .
 
 pwd:
 
-/vendor/zeekr/interfaces
+/vendor/zr/interfaces
 
 mkdir -p impl
 
 cd cd impl/
 
-访问 ：https://snc-gerrit.zeekrlife.com/admin/repos
+访问 ：https://snc-gerrit.zrlife.com/admin/repos
 
 git clone url
 
@@ -794,7 +794,7 @@ Test suggest: 只增加注释, 没有更改代码, 无需测试.
 
 test case: 无
 
-git push origin HEAD:refs/for/zeekr_mainline_dev
+git push origin HEAD:refs/for/zr_mainline_dev
 
 git config --global core.autocrlf false 
 
@@ -854,7 +854,7 @@ DVR的一般录像、紧急录像和泊车录像；这些mp4文件通过gallery 
 
 | 12  | CameraManager   | 1、从 AI Camera 获取 DVR 录制需要视频流，调用内存池的接口进行缓存，最终由DVRManager 写入u盘 |
 
-zeekr_natvie_dvr 对 AI Camera 的需求
+zr_natvie_dvr 对 AI Camera 的需求
 
 | index | 需求大类   | 需求item                           |
 
@@ -862,7 +862,7 @@ zeekr_natvie_dvr 对 AI Camera 的需求
 
 | 1   | 基本功能要求 | 1、提供 H265 每帧的 AMediaCodecBufferInfo 数据2、提供 H265 每帧的 对应的RGBA 数据，用于生成缩略图3、提供 H265 buffer 对应的AMediaFormat 信息4、ADCU camera 的故障状态，用于通知上层显示异常状态5、Video lock 和 link lock 状态，用于哨兵 开启和关闭状态处理6、getcameralistsize（需要真实的camera list）7、getCameraCharacteristics (需要当前项目camear 的信息) |
 
-| 2   | 异常场景   | 1、当编码器异常的时候，通知到zeek_native_dvr2、当zeekr_native_dvr 收不到 mediaformat 的信息时，AI camera 需要做异常处理 |
+| 2   | 异常场景   | 1、当编码器异常的时候，通知到zeek_native_dvr2、当zr_native_dvr 收不到 mediaformat 的信息时，AI camera 需要做异常处理 |
 
 \# 4、Class Definition
 
@@ -888,7 +888,7 @@ zeekr_natvie_dvr 对 AI Camera 的需求
 
 设计说明（类层级）
 
-ZeekrNativeDVR 
+zrNativeDVR 
 
 功能：AIDL接口实现
 
@@ -1038,15 +1038,15 @@ FeatureSupport
 
 | 10  | CarCameraManager::mVideoEncodeDaemonThread |   | 检测编码器线程      | 常驻 | 跟随进程生命                   |
 
-| 11  | ZeekrCameraManager::mThreadVec       |   | 哨兵取流线程       | 临时 | 哨兵启动时创建线程，哨兵结束后销毁        |
+| 11  | zrCameraManager::mThreadVec       |   | 哨兵取流线程       | 临时 | 哨兵启动时创建线程，哨兵结束后销毁        |
 
-| 12  | ZeekrCameraManager::mDvrCaptureThread   |   | DVR一般录像取流线程   | 临时 | DVR一般录像启动时创建线程，DVR一般录像结束后销毁 |
+| 12  | zrCameraManager::mDvrCaptureThread   |   | DVR一般录像取流线程   | 临时 | DVR一般录像启动时创建线程，DVR一般录像结束后销毁 |
 
-| 13  | ZeekrCameraManager::mDvrAvmCaptureThread  |   | AVM取流线程       | 临时 | 泊车录像启动时创建线程，泊车录像/哨兵结束时销毁 |
+| 13  | zrCameraManager::mDvrAvmCaptureThread  |   | AVM取流线程       | 临时 | 泊车录像启动时创建线程，泊车录像/哨兵结束时销毁 |
 
 | 14  | DVRMenuStatus::hornMonitorThread      |   | 定时器线程        | 临时 | 汽车鸣笛时创建线程，鸣笛停止销毁         |
 
-zeekr_natvie_dvr 需要的task
+zr_natvie_dvr 需要的task
 
 背景；1、因u盘的写入速率、usb2.0 和 usb 3.0 的写入 速率限制，以及 DVR 不同分辨率场景，多路并发写文件的场景 等 需要制定 DVR 写入策略和 海康u盘的写入性能指标，以及 异常处理；
 
@@ -1084,7 +1084,7 @@ U盘的写入速率
 
 二、落盘优化方案设计
 
-[[SNCABF8295-92631\] 【CS1E】【哨兵模式】【偶现】哨兵模式封面显示白屏 - Jira](https://devops-jira.zeekrlife.com/browse/SNCABF8295-92631)
+[[SNCABF8295-92631\] 【CS1E】【哨兵模式】【偶现】哨兵模式封面显示白屏 - Jira](https://devops-jira.zrlife.com/browse/SNCABF8295-92631)
 
 哨兵生成缩略图后，缩略图缓存在操作系统的文件缓存中，尚未落盘，需要等操作系统统一进行落盘，但是CS1E的车型开关车门的时候会让U盘继电器掉电（省电策略），这个掉电就会导致U盘断电，自动卸载，导致原先在操作系统文件缓存中的缩略图没有落到U盘中，下次U盘上电挂载时，就会导致缩略图为空
 
@@ -1100,7 +1100,7 @@ Next: 需要安波福和U盘供电策略系统沟通一下，看是否有方案�
 
 2、多路DVR的方案 使得 DVR 一般录像、紧急录像、泊车录像 的info.txt 更加臃肿
 
-3、[[SNCABF8295-92524\] 【CS1E】【DVR】【偶现】正常录制视频界面停留在一般录像界面一段时间后视频全部不显示 - Jira](https://devops-jira.zeekrlife.com/browse/SNCABF8295-92524)
+3、[[SNCABF8295-92524\] 【CS1E】【DVR】【偶现】正常录制视频界面停留在一般录像界面一段时间后视频全部不显示 - Jira](https://devops-jira.zrlife.com/browse/SNCABF8295-92524)
 
 DVR的删除功能 和 新增 依赖文件锁 以及 行为同步
 
@@ -1164,7 +1164,7 @@ zeek_native_sentry 模块 从AI_Camera 获取编码后的H265视频流，实时�
 
 | 10  | CameraManager   | 1、从 AI Camera 获取 DVR 录制需要视频流，调用内存池的接口进行缓存，最终由DVRManager 写入u盘 |        |
 
-3.3 zeekr_natvie_sentry 对 AI Camera 的需求
+3.3 zr_natvie_sentry 对 AI Camera 的需求
 
 | index | 需求大类   | 需求item                           |
 
@@ -1172,7 +1172,7 @@ zeek_native_sentry 模块 从AI_Camera 获取编码后的H265视频流，实时�
 
 | 1   | 基本功能要求 | 1、提供 H265 每帧的 AMediaCodecBufferInfo 数据2、提供 H265 每帧的 对应的RGBA 数据，用于生成缩略图3、提供 H265 buffer 对应的AMediaFormat 信息4、ADCU camera 的故障状态，用于通知上层显示异常状态5、Video lock 和 link lock 状态，用于哨兵 开启和关闭状态处理6、getcameralistsize（需要真实的camera list）7、getCameraCharacteristics (需要当前项目camear 的信息) |
 
-| 2   | 异常场景   | 1、当编码器异常的时候，通知到zeek_native_sentry2、当zeekr_native_sentry 收不到 mediaformat 的信息时，AI camera 需要做异常处理 |
+| 2   | 异常场景   | 1、当编码器异常的时候，通知到zeek_native_sentry2、当zr_native_sentry 收不到 mediaformat 的信息时，AI camera 需要做异常处理 |
 
 1、DVR 一般录像 video合成
 
@@ -1217,17 +1217,17 @@ Linux环境常用命令：
 
 Git常用仓库:
 
- zeekr/android/platform/vendor/zeekr/interfaces/camera
+ zr/android/platform/vendor/zr/interfaces/camera
 
-   zeekr/android/platform/vendor/zeekr/interfaces/impl/camera
+   zr/android/platform/vendor/zr/interfaces/impl/camera
 
-   zeekr/android/platform/vendor/zeekr/modules/cameradevicemanager
+   zr/android/platform/vendor/zr/modules/cameradevicemanager
 
-   zeekr/android/platform/vendor/zeekr/modules/soundrecorder
+   zr/android/platform/vendor/zr/modules/soundrecorder
 
-   zeekr/android/platform/vendor/zeekr/interfaces/carcameramanager
+   zr/android/platform/vendor/zr/interfaces/carcameramanager
 
-   zeekr/android/platform/vendor/zeekr/interfaces/impl/carcameramanager
+   zr/android/platform/vendor/zr/interfaces/impl/carcameramanager
 
 Git常用命令:
 
@@ -1249,9 +1249,9 @@ Git常用命令:
 
 ​	git commit 
 
-​	git push origin HEAD:refs/for/zeekr_mainline_dev
+​	git push origin HEAD:refs/for/zr_mainline_dev
 
-​    git push origin HEAD:refs/for/zeekr_release_sa8295p_postcs_ef_110
+​    git push origin HEAD:refs/for/zr_release_sa8295p_postcs_ef_110
 
 ​	git branch 
 
@@ -1265,13 +1265,13 @@ Git常用命令:
 
 cd test_device/lagvm/LINUX/android/
 
-zeekr_build
+zr_build
 
 source build/envsetup.sh
 
  lunch   
 
- lunch zeekr_dhu-userdebug  （user版本 lunch zeekr_dhu-user）
+ lunch zr_dhu-userdebug  （user版本 lunch zr_dhu-user）
 
 //代码提交规范
 
